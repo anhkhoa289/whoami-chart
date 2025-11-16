@@ -8,6 +8,12 @@ This chart deploys a simple web service that returns information about the HTTP 
 
 ## Installation
 
+### Install from OCI registry
+
+```bash
+helm install whoami oci://ghcr.io/anhkhoa289/whoami-chart/whoami --version 0.0.1
+```
+
 ### Install from local directory
 
 ```bash
