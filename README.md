@@ -8,22 +8,20 @@ This chart deploys a simple web service that returns information about the HTTP 
 
 ## Installation
 
-### Install from local directory
-
 ```bash
-helm install whoami ./whoami
+helm install whoami oci://ghcr.io/anhkhoa289/whoami-chart/whoami --version 0.0.1
 ```
 
-### Install with custom values
+You can customize the installation with custom values:
 
 ```bash
-helm install whoami ./whoami -f custom-values.yaml
+helm install whoami oci://ghcr.io/anhkhoa289/whoami-chart/whoami --version 0.0.1 -f custom-values.yaml
 ```
 
-### Install with command-line overrides
+Or with command-line overrides:
 
 ```bash
-helm install whoami ./whoami --set replicaCount=2 --set service.type=LoadBalancer
+helm install whoami oci://ghcr.io/anhkhoa289/whoami-chart/whoami --version 0.0.1 --set replicaCount=2 --set service.type=LoadBalancer
 ```
 
 ## Configuration
@@ -62,7 +60,7 @@ curl http://localhost:8080
 ### With LoadBalancer service
 
 ```bash
-helm install whoami ./whoami --set service.type=LoadBalancer
+helm install whoami oci://ghcr.io/anhkhoa289/whoami-chart/whoami --version 0.0.1 --set service.type=LoadBalancer
 # Wait for external IP
 kubectl get svc whoami
 ```
@@ -70,7 +68,7 @@ kubectl get svc whoami
 ### With Ingress
 
 ```bash
-helm install whoami ./whoami --set ingress.enabled=true --set ingress.hosts[0].host=whoami.example.com
+helm install whoami oci://ghcr.io/anhkhoa289/whoami-chart/whoami --version 0.0.1 --set ingress.enabled=true --set ingress.hosts[0].host=whoami.example.com
 ```
 
 ## Uninstall
