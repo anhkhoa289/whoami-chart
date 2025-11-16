@@ -1,0 +1,13 @@
+apiVersion: v2
+name: whoami
+description: A Helm chart for deploying traefik/whoami application
+type: application
+version: 0.1.0
+appVersion: "latest"
+keywords:
+  - whoami
+  - traefik
+  - demo
+maintainers:
+  - name: anhkhoa289
+home: https://github.com/traefik/whoami
